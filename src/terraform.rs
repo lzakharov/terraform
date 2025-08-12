@@ -36,7 +36,7 @@ impl TerraformExtension {
 
         let (platform, arch) = zed::current_platform();
         let download_url = format!(
-            "https://releases.hashicorp.com/terraform-ls/{version}/terraform-ls_{version}_{os}_{arch}.zip",
+            "https://hashicorp-releases.yandexcloud.net/terraform-ls/{version}/terraform-ls_{version}_{os}_{arch}.zip",
             version = release.version.strip_prefix('v').unwrap_or(&release.version),
             os = match platform {
                 zed::Os::Mac => "darwin",
